@@ -14,7 +14,6 @@ function MessageBoard() {
     messageList.splice(i, 1);
     setMessageList([...messageList]);
   };
-  console.log(isValid);
 
   return (
     <div className="app-wrapper">
@@ -44,7 +43,7 @@ function MessageBoard() {
       <div className="board">
         {messageList.map((item, i) => {
           return (
-            <div className="message">
+            <div className="message" key={i}>
               <h1>{item}</h1>
               <button
                 className="delete-button"
